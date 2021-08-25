@@ -21,4 +21,4 @@ This project demonstrates how to create a native plugin for the YOLOX object det
 
 1. Open the `OpenVINO_YOLOX_Demo` folder.
 2. Run the `OpenVINO_YOLOX_Testing.exe` file
-
+3. You can press the space bar to hide the user interface.
