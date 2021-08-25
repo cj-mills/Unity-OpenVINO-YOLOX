@@ -9,7 +9,7 @@ This project demonstrates how to create a native plugin for the YOLOX object det
 
 1. Download the [`models`](https://drive.google.com/drive/folders/19Pzuo_Hsr0eQDs8COxKjMrosoVyw2WWW?usp=sharing) folder from Google Drive. ([link](https://drive.google.com/drive/folders/19Pzuo_Hsr0eQDs8COxKjMrosoVyw2WWW?usp=sharing))
 
-   ![google-drive-download-models-folder](\images\google-drive-download-models-folder.png)
+   ![google-drive-download-models-folder](images\google-drive-download-models-folder.png)
 
 2. Extract the `models` folder from the `.zip` file.
 
