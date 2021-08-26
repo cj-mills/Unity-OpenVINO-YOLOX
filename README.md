@@ -1,7 +1,7 @@
 # Unity-OpenVINO-YOLOX
 Testing a native plugin for the YOLOX object detection model for Unity that leverages the OpenVINO™ Toolkit.
 
-
+![google-drive-download-models-folder](https://raw.githubusercontent.com/cj-mills/Unity-OpenVINO-YOLOX/main/images/OpenVINO_YOLOX_Plugin_Demo.gif)
 
 
 ## Download Models
