@@ -4,6 +4,9 @@ Testing a native plugin for the YOLOX object detection model for Unity that leve
 ![OpenVINO_YOLOX_Plugin_Demo](https://raw.githubusercontent.com/cj-mills/Unity-OpenVINO-YOLOX/main/images/OpenVINO_YOLOX_Plugin_Demo.gif)
 
 
+## Demo Video
+* [OpenVINO YOLOX Unity Plugin Demo](https://www.youtube.com/watch?v=opClIrHumzI)
+
 
 
 ## Download Models
