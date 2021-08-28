@@ -24,5 +24,9 @@ Testing a native plugin for the YOLOX object detection model for Unity that leve
 ## Run the Demo
 
 1. Open the `OpenVINO_YOLOX_Demo` folder.
+
 2. Run the `OpenVINO_YOLOX_Testing.exe` file
+
+   **Note:** The `yolo_m` model seems to provide the best balance between accuracy and performance.
+
 3. You can press the space bar to hide the user interface.
