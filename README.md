@@ -17,7 +17,7 @@ Testing a native plugin for the YOLOX object detection model for Unity that leve
 
 2. Extract the `models` folder from the `.zip` file.
 
-3. Copy and paste the `models` folder into the [`OpenVINO_YOLOX_Demo\Build`](https://github.com/cj-mills/Unity-OpenVINO-YOLOX/tree/main/OpenVINO_YOLOX_Demo\Build) folder.
+3. Copy and paste the `models` folder into the [`OpenVINO_YOLOX_Demo\Build`](https://github.com/cj-mills/Unity-OpenVINO-YOLOX/tree/main/OpenVINO_YOLOX_Demo/Build) folder.
 
 
 
