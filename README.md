@@ -11,9 +11,7 @@ Testing a native plugin for the [YOLOX](https://github.com/Megvii-BaseDetection/
 
 ## Download Models
 
-1. Download the [`models`](https://drive.google.com/drive/folders/19Pzuo_Hsr0eQDs8COxKjMrosoVyw2WWW?usp=sharing) folder from Google Drive. ([link](https://drive.google.com/drive/folders/19Pzuo_Hsr0eQDs8COxKjMrosoVyw2WWW?usp=sharing))
-
-   ![google-drive-download-models-folder](https://raw.githubusercontent.com/cj-mills/Unity-OpenVINO-YOLOX/main/images/google-drive-download-models-folder.png)
+1. Download the [`models`](https://drive.google.com/file/d/19eAIMDgNHBqb2Gy6GhDKoghVJmN4_ud2/view?usp=sharing) folder from Google Drive. ([link](https://drive.google.com/file/d/19eAIMDgNHBqb2Gy6GhDKoghVJmN4_ud2/view?usp=sharing))
 
 2. Extract the `models` folder from the `.zip` file.
 
