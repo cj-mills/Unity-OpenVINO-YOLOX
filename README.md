@@ -11,7 +11,7 @@ Testing a native plugin for the [YOLOX](https://github.com/Megvii-BaseDetection/
 
 ## Download Models
 
-1. Download the [`models`](https://drive.google.com/file/d/19eAIMDgNHBqb2Gy6GhDKoghVJmN4_ud2/view?usp=sharing) folder from Google Drive. ([link](https://drive.google.com/file/d/19eAIMDgNHBqb2Gy6GhDKoghVJmN4_ud2/view?usp=sharing))
+1. Download the [`models`](https://drive.google.com/file/d/1N4GuHcKyBpDzJQ1r0LulzD3KRE3GRnAe/view?usp=sharing) folder from Google Drive. ([link](https://drive.google.com/file/d/1N4GuHcKyBpDzJQ1r0LulzD3KRE3GRnAe/view?usp=sharing))
 
 2. Extract the `models` folder from the `.zip` file.
 
