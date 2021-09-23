@@ -13,7 +13,7 @@ Testing a native plugin for the [YOLOX](https://github.com/Megvii-BaseDetection/
 
 1. Download the [`models`](https://drive.google.com/file/d/1N4GuHcKyBpDzJQ1r0LulzD3KRE3GRnAe/view?usp=sharing) folder from Google Drive. ([link](https://drive.google.com/file/d/1N4GuHcKyBpDzJQ1r0LulzD3KRE3GRnAe/view?usp=sharing))
 
-2. Extract the `models` folder from the `.zip` file.
+2. Extract the `models` folder from the `.tar` file.
 
 3. Copy and paste the `models` folder into the [`OpenVINO_YOLOX_Demo\Build`](https://github.com/cj-mills/Unity-OpenVINO-YOLOX/tree/main/OpenVINO_YOLOX_Demo/Build) folder.
 
