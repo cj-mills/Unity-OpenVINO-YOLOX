@@ -28,3 +28,14 @@ Testing a native plugin for the [YOLOX](https://github.com/Megvii-BaseDetection/
    **Note:** The `yolo_m` model seems to provide the best balance between accuracy and performance.
 
 3. You can press the space bar to hide the user interface.
+
+
+
+## Tutorial Links
+
+
+[Part 1](https://christianjmills.com/OpenVINO-Object-Detection-for-Unity-Tutorial-1/): This post covers the prerequisite software, pretrained object detection models, and test videos used in the tutorial.
+
+[Part 2](https://christianjmills.com/OpenVINO-Object-Detection-for-Unity-Tutorial-2/): This post walks through the steps needed to create a Dynamic link library (DLL) in Visual Studio to perform inference with the pretrained deep learning model.
+
+[Part 3](https://christianjmills.com/OpenVINO-Object-Detection-for-Unity-Tutorial-3/): This post demonstrates how to create a Unity project to access the DLL as a plugin.
