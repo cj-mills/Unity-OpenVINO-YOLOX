@@ -141,7 +141,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Intel\openvino_2021.4.582\deployment_tools\inference_engine\include;C:\Program Files %28x86%29\Intel\openvino_2021.4.582\opencv\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Intel\openvino_2021.3.394\deployment_tools\inference_engine\include;C:\Program Files %28x86%29\Intel\openvino_2021.3.394\opencv\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OpenMPSupport>
       </OpenMPSupport>
       <LanguageStandard>Default</LanguageStandard>
@@ -152,7 +152,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>C:\Program Files (x86)\Intel\openvino_2021.4.582\deployment_tools\inference_engine\lib\intel64\Release\*;C:\Program Files (x86)\Intel\openvino_2021.4.582\opencv\lib\*;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Program Files (x86)\Intel\openvino_2021.3.394\deployment_tools\inference_engine\lib\intel64\Release\*;C:\Program Files (x86)\Intel\openvino_2021.3.394\opencv\lib\*;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

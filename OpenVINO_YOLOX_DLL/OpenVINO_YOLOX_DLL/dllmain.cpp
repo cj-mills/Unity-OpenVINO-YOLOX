@@ -82,16 +82,14 @@ extern "C" {
         std::reverse(available_devices.begin(), available_devices.end());
 
         // Configure the cache directory for GPU compute devices
-        //std::regex e("(GPU)(.*)");
-        //// Iterate through the available compute devices
-        //for (auto&& device : available_devices) {
-        //    // Only configure the cache directory for GPUs
-        //    if (std::regex_match(device, e)) {
-        //        ie.SetConfig({ {CONFIG_KEY(CACHE_DIR), "cache"} }, device);
-        //    }
-        //}
-
-        ie.SetConfig({ {CONFIG_KEY(CACHE_DIR), "cache"} }, "GPU");
+        std::regex e("(GPU)(.*)");
+        // Iterate through the available compute devices
+        for (auto&& device : available_devices) {
+            // Only configure the cache directory for GPUs
+            if (std::regex_match(device, e)) {
+                ie.SetConfig({ {CONFIG_KEY(CACHE_DIR), "cache"} }, device);
+            }
+        }
 
         // Add all available compute devices to a single string
         for (auto&& device : available_devices) {
