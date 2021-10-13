@@ -1,13 +1,7 @@
-# Unity-OpenVINO-YOLOX
-Testing a native plugin for the [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX) object detection model for Unity that leverages the OpenVINO™ Toolkit.
-
+# Unity OpenVINO YOLOX In-Game Camera
 ![OpenVINO_YOLOX_Plugin_In-Game Camera](https://raw.githubusercontent.com/cj-mills/Unity-OpenVINO-YOLOX/in-game-camera/images/OpenVINO_YOLOX_Plugin_In-Game_Camera.gif)
 
-
-## Demo Video
-* [OpenVINO YOLOX Unity Plugin Demo](https://www.youtube.com/watch?v=opClIrHumzI)
-
-
+This follow up tutorial covers a method to get input from the in-game camera, rather than a webcam or video feed. It also covers a method for using using the OpenVINO plugin directly in the Unity Editor.
 
 ## Download Models
 
@@ -33,9 +27,3 @@ Testing a native plugin for the [YOLOX](https://github.com/Megvii-BaseDetection/
 
 ## Tutorial Links
 
-
-[Part 1](https://christianjmills.com/OpenVINO-Object-Detection-for-Unity-Tutorial-1/): This post covers the prerequisite software, pretrained object detection models, and test videos used in the tutorial.
-
-[Part 2](https://christianjmills.com/OpenVINO-Object-Detection-for-Unity-Tutorial-2/): This post walks through the steps needed to create a Dynamic link library (DLL) in Visual Studio to perform inference with the pretrained deep learning model.
-
-[Part 3](https://christianjmills.com/OpenVINO-Object-Detection-for-Unity-Tutorial-3/): This post demonstrates how to create a Unity project to access the DLL as a plugin.
