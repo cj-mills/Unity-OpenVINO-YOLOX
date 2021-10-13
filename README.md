@@ -1,7 +1,7 @@
 # Unity-OpenVINO-YOLOX
 Testing a native plugin for the [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX) object detection model for Unity that leverages the OpenVINO™ Toolkit.
 
-![OpenVINO_YOLOX_Plugin_In-Game Camera](https://raw.githubusercontent.com/cj-mills/Unity-OpenVINO-YOLOX/main/images/OpenVINO_YOLOX_Plugin_In-Game_Camera.gif)
+![OpenVINO_YOLOX_Plugin_In-Game Camera](https://raw.githubusercontent.com/cj-mills/Unity-OpenVINO-YOLOX/in-game-camera/images/OpenVINO_YOLOX_Plugin_In-Game_Camera.gif)
 
 
 ## Demo Video
