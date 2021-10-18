@@ -12,6 +12,10 @@ This follow up tutorial covers a method to get input from the in-game camera, ra
 3. Copy and paste the `models` folder into the [`OpenVINO_YOLOX_Demo\Build`](https://github.com/cj-mills/Unity-OpenVINO-YOLOX/tree/main/OpenVINO_YOLOX_Demo/Build) folder.
 
 
+**Note:**
+GitHub breaks the large .bin files that contain the model weights, so follow the instructions in the README to download the models folder from GitHub and drop the extracted folder into the StreamingAssets folder in the Unity project. You will also likely need to rebuild the Unit.asset like for the Style Transfer version.
+
+
 
 ## Run the Demo
 
