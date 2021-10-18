@@ -15,7 +15,18 @@ This follow up tutorial covers a method to get input from the in-game camera, ra
 **Note:**
 GitHub breaks the large .bin files that contain the model weights, so follow the instructions in the README to download the models folder from GitHub and drop the extracted folder into the StreamingAssets folder in the Unity project. You will also likely need to rebuild the Unit.asset like for the Style Transfer version.
 
+**Note:** You might get an error like the one below in Unity, if you download the project from GitHub. 
 
+`AssetImporter is referencing an asset from the previous import. This should not happen.`
+
+You can fix this issue by rebuilding the Unit asset. 
+1. Open the Kinematica folder in the Assets section. 
+2. Double-click on the `Unit` asset.
+3. Click `Build` in the pop-up window. 
+4. Close the pop-up window once the build is complete.
+5. Back in the `Assets` section, open the `Biped` scene in the `Scenes` folder.
+
+The project should run normally now. However, there might be some stuttering the first time it is run.
 
 ## Run the Demo
 
