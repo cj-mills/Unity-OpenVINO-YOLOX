@@ -1,2 +1,1 @@
 *.bin filter=lfs diff=lfs merge=lfs
-# KinematicaBinary_62504ea0b0fb2c74a872e8ccf8b7d7c2.bin filter=lfs diff=lfs merge=lfs -text
