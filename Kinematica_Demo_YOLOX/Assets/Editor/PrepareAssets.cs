@@ -25,6 +25,8 @@ public class PrepareAssets : MonoBehaviour
         {
             Debug.Log("models folder already exists in StreamingAssets folder");
         }
+
+        AssetDatabase.CopyAsset("Assets/OpenVINO/Plugins/x86_64/plugins.xml", "Assets/StreamingAssets/plugins.xml");
     }
 
     //[MenuItem("Tools/OpenVINO/Copy to Plugins")]
