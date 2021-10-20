@@ -5,6 +5,7 @@ using UnityEngine.Rendering;
 using System;
 using System.Runtime.InteropServices;
 using UnityEngine.UI;
+using System.IO;
 
 public class ObjectDetector : MonoBehaviour
 {
@@ -103,6 +104,31 @@ public class ObjectDetector : MonoBehaviour
     // References to input fields for the target image dimensions
     private TMPro.TMP_InputField width;
     private TMPro.TMP_InputField height;
+
+
+    public void Awake()
+    {
+        #if UNITY_EDITOR_WIN
+        return;
+        #else
+
+        Debug.Log("Checking for plugins.xml file");
+
+            string sourcePath = $"{Application.streamingAssetsPath}/plugins.xml";
+            string targetPath = $"{Application.dataPath}/Plugins/x86_64/plugins.xml";
+
+            if (File.Exists(targetPath))
+            {
+                Debug.Log("plugins.xml already in folder");
+            }
+            else
+            {
+                Debug.Log("Moving plugins.xml file from StreamingAssets to Plugins folder.");
+                File.Move(sourcePath, targetPath);
+            }
+
+        #endif
+    }
 
 
     /// <summary>
