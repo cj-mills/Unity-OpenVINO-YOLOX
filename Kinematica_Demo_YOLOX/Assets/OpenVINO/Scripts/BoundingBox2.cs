@@ -23,6 +23,7 @@ public class BoundingBox2
     // The label text
     private TextMeshProUGUI textContent;
 
+    // The UI Images used to draw the bounding box
     private GameObject[] bboxLines = new GameObject[4];
 
 
