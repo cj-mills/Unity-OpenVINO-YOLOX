@@ -51,6 +51,9 @@ public class ObjectDetector : MonoBehaviour
     [DllImport(dll)]
     private static extern void SetConfidenceThreshold(float threshold);
 
+    [DllImport(dll)]
+    private static extern void FreeResources();
+
 
     // The requested webcam dimensions
     private Vector2Int webcamDims = new Vector2Int(1280, 720);
@@ -623,6 +626,11 @@ public class ObjectDetector : MonoBehaviour
         // Update the threshold value
         inputField.text = $"{threshold}";
         SetConfidenceThreshold(threshold);
+    }
+
+    private void OnDisable()
+    {
+        FreeResources();
     }
 
     // Called when the MonoBehaviour will be destroyed
