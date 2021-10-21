@@ -29,36 +29,6 @@ public class PrepareAssets : MonoBehaviour
         AssetDatabase.CopyAsset("Assets/OpenVINO/Plugins/x86_64/plugins.xml", "Assets/StreamingAssets/plugins.xml");
     }
 
-    //[MenuItem("Tools/OpenVINO/Copy to Plugins")]
-    //static void CopyDLLs()
-    //{
-    //    if (AssetDatabase.IsValidFolder("Assets/Plugins") == false)
-    //    {
-    //        Debug.Log("Creating Plugins folder.");
-    //        AssetDatabase.CreateFolder("Assets", "Plugins");
-
-    //        //if (AssetDatabase.IsValidFolder("Assets/Plugins/x86_64") == false)
-    //        //{
-    //        //    Debug.Log("Creating x86_64 folder.");
-    //        //    AssetDatabase.CreateFolder("Assets/Plugins", "x86_64");
-    //        //}
-    //    }
-
-        
-
-    //    if (AssetDatabase.IsValidFolder("Assets/Plugins/x86_64") == false)
-    //    {
-    //        Debug.Log("Copying DLLs to Plugins/x86_64 folder.");
-    //        bool success = AssetDatabase.CopyAsset("Assets/OpenVINO/Plugins/x86_64", "Assets/Plugins/x86_64");
-    //        Debug.Log(success);
-    //        AssetDatabase.Refresh();
-    //    }
-    //    else
-    //    {
-    //        //Debug.Log("models folder already exists in StreamingAssets folder");
-    //    }
-    //}
-
     [MenuItem("Tools/OpenVINO/Refresh")]
     static void Refresh()
     {
@@ -66,20 +36,20 @@ public class PrepareAssets : MonoBehaviour
         Debug.Log("Refreshing Asset Database.");
     }
 
-    //[MenuItem("Tools/OpenVINO/Attach to Camera")]
-    //static void AttachScript()
-    //{
-    //    GameObject camera = Camera.main.gameObject;
+    [MenuItem("Tools/OpenVINO/Attach to Camera")]
+    static void AttachScript()
+    {
+        GameObject camera = Camera.main.gameObject;
 
-    //    if (camera.GetComponent<StyleTransfer>() == null)
-    //    {
-    //        camera.AddComponent<StyleTransfer>();
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("Script already attached.");
-    //    }
-    //}
+        if (camera.GetComponent<ObjectDetector>() == null)
+        {
+            camera.AddComponent<ObjectDetector>();
+        }
+        else
+        {
+            Debug.Log("Script already attached.");
+        }
+    }
 
     [MenuItem("Tools/OpenVINO/Move Editor Script")]
     static void MoveEditorScript()
