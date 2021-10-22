@@ -28,7 +28,7 @@ public class ObjectDetector : MonoBehaviour
     public Text consoleText;
 
     // Name of the DLL file
-    const string dll = "OpenVINO_YOLOX_Alchemist_DLL";
+    const string dll = "OpenVINO_YOLOX_DLL";
 
     [DllImport(dll)]
     private static extern int FindAvailableDevices();
