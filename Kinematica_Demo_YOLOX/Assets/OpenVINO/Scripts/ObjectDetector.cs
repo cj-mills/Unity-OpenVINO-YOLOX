@@ -90,7 +90,7 @@ public class ObjectDetector : MonoBehaviour
     private Utils.Object[] objectInfoArray;
 
     // Stores the bounding boxes for detected objects
-    private List<BoundingBox2> boundingBoxes = new List<BoundingBox2>();
+    private List<BoundingBoxYOLOX> boundingBoxes = new List<BoundingBoxYOLOX>();
     // Parsed list of compute devices for OpenVINO
     private List<string> deviceList = new List<string>();
     // File paths for the OpenVINO IR models
@@ -102,8 +102,6 @@ public class ObjectDetector : MonoBehaviour
 
     // A reference to the canvas for the user interface
     private GameObject canvas;
-    // A reference to the Graphy on-screen metrics
-    private GameObject graphy;
     // References to input fields for the target image dimensions
     private TMPro.TMP_InputField width;
     private TMPro.TMP_InputField height;
@@ -338,7 +336,6 @@ public class ObjectDetector : MonoBehaviour
     {
         // Get references to GameObjects in hierarchy
         canvas = GameObject.Find("Canvas");
-        graphy = GameObject.Find("[Graphy]");
         width = GameObject.Find("Width").GetComponent<TMPro.TMP_InputField>();
         height = GameObject.Find("Height").GetComponent<TMPro.TMP_InputField>();
 
@@ -486,7 +483,7 @@ public class ObjectDetector : MonoBehaviour
             catch
             {
                 // Add a new bounding box object when needed
-                boundingBoxes.Add(new BoundingBox2(objectInfoArray[i]));
+                boundingBoxes.Add(new BoundingBoxYOLOX(objectInfoArray[i]));
             }
         }
 
@@ -507,7 +504,6 @@ public class ObjectDetector : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             canvas.SetActive(!canvas.activeInHierarchy);
-            graphy.SetActive(!graphy.activeInHierarchy);
         }
     }
 
