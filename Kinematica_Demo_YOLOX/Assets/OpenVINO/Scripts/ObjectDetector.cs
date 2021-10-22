@@ -31,7 +31,11 @@ public class ObjectDetector : MonoBehaviour
     const string dll = "OpenVINO_YOLOX_Alchemist_DLL";
 
     [DllImport(dll)]
-    private static extern IntPtr GetAvailableDevices();
+    private static extern int FindAvailableDevices();
+
+    [DllImport(dll)]
+    private static extern IntPtr GetDeviceName(int index);
+
 
     [DllImport(dll)]
     private static extern IntPtr InitOpenVINO(string model, int width, int height, int device);
@@ -330,7 +334,6 @@ public class ObjectDetector : MonoBehaviour
         Debug.Log("");
     }
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -347,16 +350,12 @@ public class ObjectDetector : MonoBehaviour
             // Get the list of available models
             GetOpenVINOModels();
 
-            // Get an unparsed list of available 
-            string openvinoDevices = Marshal.PtrToStringAnsi(GetAvailableDevices());
-
-            Debug.Log($"Available Devices:");
-            // Parse list of available compute devices
-            foreach (string device in openvinoDevices.Split(','))
+            Debug.Log("Available Devices:");
+            int deviceCount = FindAvailableDevices();
+            for (int i = 0; i < deviceCount; i++)
             {
-                // Add device name to list
-                deviceList.Add(device);
-                Debug.Log(device);
+                deviceList.Add(Marshal.PtrToStringAnsi(GetDeviceName(i)));
+                Debug.Log(deviceList[i]);
             }
         }
         else
