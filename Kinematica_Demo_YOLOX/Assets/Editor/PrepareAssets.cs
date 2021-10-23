@@ -6,8 +6,17 @@ using UnityEditor;
 public class PrepareAssets : MonoBehaviour
 {
 
+    [MenuItem("Tools/OpenVINO/Refresh")]
+    static void Refresh()
+    {
+        AssetDatabase.Refresh();
+        Debug.Log("Refreshing Asset Database.");
+    }
+
+
+
     [MenuItem("Tools/OpenVINO/Copy to StreamingAssets")]
-    static void CopyModels()
+    static void CopyToStreamingAssets()
     {
         if (AssetDatabase.IsValidFolder("Assets/StreamingAssets") == false)
         {
@@ -27,13 +36,6 @@ public class PrepareAssets : MonoBehaviour
         }
 
         AssetDatabase.CopyAsset("Assets/OpenVINO/Plugins/x86_64/plugins.xml", "Assets/StreamingAssets/plugins.xml");
-    }
-
-    [MenuItem("Tools/OpenVINO/Refresh")]
-    static void Refresh()
-    {
-        AssetDatabase.Refresh();
-        Debug.Log("Refreshing Asset Database.");
     }
 
     [MenuItem("Tools/OpenVINO/Attach to Camera")]
