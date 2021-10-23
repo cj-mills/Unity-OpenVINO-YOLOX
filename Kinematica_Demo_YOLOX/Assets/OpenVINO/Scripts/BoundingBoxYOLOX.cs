@@ -43,7 +43,7 @@ public class BoundingBoxYOLOX
         textContent.fontSize = fontSize;
         // Resize the text area
         RectTransform rectTransform = text.GetComponent<RectTransform>();
-        rectTransform.sizeDelta = new Vector2(250, 50);
+        rectTransform.sizeDelta = new Vector2(300, 50);
         // Position the label above the top left corner of the bounding box
         Vector3 textPos = new Vector3(info.x0, info.y0, 0f);
         float xOffset = rectTransform.rect.width / 2;
