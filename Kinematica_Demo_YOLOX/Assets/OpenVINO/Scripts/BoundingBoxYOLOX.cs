@@ -61,7 +61,7 @@ public class BoundingBoxYOLOX
         {
             bboxLines[i].SetActive(show);
         }
-        
+
         text.SetActive(show);
     }
 
@@ -79,7 +79,7 @@ public class BoundingBoxYOLOX
         // Offset value to align the bounding box points
         float offset = lineWidth / 2;
 
-
+        // Line Dimensions
         Vector2[] dimensions = new Vector2[]
         {
             new Vector2(width + lineWidth, lineWidth),
@@ -88,7 +88,7 @@ public class BoundingBoxYOLOX
             new Vector2(lineWidth, height + lineWidth)
         };
 
-
+        // Line positions
         Vector3[] positions = new Vector3[] 
         {
             new Vector3(x0 + (width/2), y0, 0),
@@ -97,7 +97,7 @@ public class BoundingBoxYOLOX
             new Vector3(x0, y0 - (height / 2), 0)
         };
 
-        // Set the material color
+        // Set the bbox color, dimensions, and positions
         for (int i = 0; i < bboxLines.Length; i++)
         {
             Image bboxLine = bboxLines[i].GetComponent<Image>();
@@ -145,13 +145,16 @@ public class BoundingBoxYOLOX
     {
         // Add a text componenet to store the label text
         textContent = text.AddComponent<TextMeshProUGUI>();
-        // Assign text object to the label canvas
+        // Assign text object to the canvas
         text.transform.SetParent(canvas.transform);
 
         for (int i=0; i < bboxLines.Length; i++)
         {
+            // Create a new GameObject
             bboxLines[i] = new GameObject();
+            // Add a new Image component
             bboxLines[i].AddComponent<Image>();
+            // Attach the GameObject to the canvas
             bboxLines[i].transform.SetParent(canvas.transform);
         }
 
