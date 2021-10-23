@@ -91,7 +91,7 @@ public class ObjectDetector : MonoBehaviour
     // Stores the raw pixel data for inputTex
     private byte[] inputData;
     // Stores information about detected obejcts
-    private Utils.Object[] objectInfoArray;
+    private Utils.Object[] objectInfoArray = new Utils.Object[0];
 
     // Stores the bounding boxes for detected objects
     private List<BoundingBoxYOLOX> boundingBoxes = new List<BoundingBoxYOLOX>();
