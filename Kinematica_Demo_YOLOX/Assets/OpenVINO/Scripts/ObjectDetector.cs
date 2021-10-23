@@ -23,9 +23,6 @@ public class ObjectDetector : MonoBehaviour
     [Tooltip("Turn AsyncGPUReadback on and off")]
     public Toggle useAsync;
 
-    [Tooltip("Text area to display console output")]
-    public Text consoleText;
-
     // Name of the DLL file
     const string dll = "OpenVINO_YOLOX_DLL";
 
@@ -132,24 +129,6 @@ public class ObjectDetector : MonoBehaviour
             }
 
         #endif
-    }
-
-
-    /// <summary>
-    /// Updates onscreen console text
-    /// </summary>
-    /// <param name="logString"></param>
-    /// <param name="stackTrace"></param>
-    /// <param name="type"></param>
-    public void Log(string logString, string stackTrace, LogType type)
-    {
-        consoleText.text = consoleText.text + "\n " + logString;
-    }
-
-    // Called when the object becomes enabled and active
-    void OnEnable() 
-    {
-        Application.logMessageReceived += Log;
     }
 
     /// <summary>
@@ -625,12 +604,6 @@ public class ObjectDetector : MonoBehaviour
     private void OnDisable()
     {
         FreeResources();
-    }
-
-    // Called when the MonoBehaviour will be destroyed
-    private void OnDestroy()
-    {
-        Application.logMessageReceived -= Log;
     }
 
     /// <summary>
