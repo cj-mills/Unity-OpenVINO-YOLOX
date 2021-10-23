@@ -59,7 +59,6 @@ public class ObjectDetector : MonoBehaviour
     private Vector2Int targetDims = new Vector2Int(640, 640);
     // The unpadded dimensions of the image being fed to the model
     private Vector2Int imageDims = new Vector2Int(0, 0);
-
     
     // The texture used to create input tensor
     private RenderTexture rTex;
