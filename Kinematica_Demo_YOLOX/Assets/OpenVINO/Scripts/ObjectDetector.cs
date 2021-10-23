@@ -55,17 +55,11 @@ public class ObjectDetector : MonoBehaviour
     private static extern void FreeResources();
 
 
-    // The requested webcam dimensions
-    private Vector2Int webcamDims = new Vector2Int(1280, 720);
-    // The dimensions of the current video source
-    private Vector2Int videoDims;
     // The targrt resolution for input images
     private Vector2Int targetDims = new Vector2Int(640, 640);
     // The unpadded dimensions of the image being fed to the model
     private Vector2Int imageDims = new Vector2Int(0, 0);
 
-    // Live video input from a webcam
-    private WebCamTexture webcamTexture;
     
     // The source video texture
     private RenderTexture videoTexture;
@@ -129,33 +123,6 @@ public class ObjectDetector : MonoBehaviour
             }
 
         #endif
-    }
-
-    /// <summary>
-    /// Resizes and positions the in-game Camera to accommodate the video dimensions
-    /// </summary>
-    private void InitializeCamera()
-    {
-        // Get a reference to the Main Camera GameObject
-        GameObject mainCamera = GameObject.Find("Main Camera");
-        // Adjust the camera position to account for updates to the VideoScreen
-        mainCamera.transform.position = new Vector3(videoDims.x / 2, videoDims.y / 2, -10f);
-        // Render objects with no perspective (i.e. 2D)
-        mainCamera.GetComponent<Camera>().orthographic = true;
-        // Adjust the camera size to account for updates to the VideoScreen
-        int orthographicSize;
-        if (((float)Screen.width / Screen.height) < ((float)videoDims.x / videoDims.y)){
-            float scale = ((float)Screen.width / Screen.height) /
-            ((float)videoDims.x / videoDims.y);
-            orthographicSize = (int)((videoDims.y / 2) / scale);
-        }
-        else
-        {
-            orthographicSize = (int)(videoDims.y / 2);
-        }
-        
-        Debug.Log($"Orthogrphic Size: {orthographicSize}");
-        mainCamera.GetComponent<Camera>().orthographicSize = orthographicSize;
     }
 
     /// <summary>
