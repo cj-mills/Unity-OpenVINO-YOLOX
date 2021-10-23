@@ -61,8 +61,6 @@ public class ObjectDetector : MonoBehaviour
     private Vector2Int imageDims = new Vector2Int(0, 0);
 
     
-    // The source video texture
-    private RenderTexture videoTexture;
     // The texture used to create input tensor
     private RenderTexture rTex;
 
@@ -78,8 +76,6 @@ public class ObjectDetector : MonoBehaviour
     // Current compute device for OpenVINO
     private string currentDevice;
 
-    // Stores the raw pixel data for inputTex
-    private byte[] inputData;
     // Stores information about detected obejcts
     private Utils.Object[] objectInfoArray = new Utils.Object[0];
 
@@ -136,12 +132,12 @@ public class ObjectDetector : MonoBehaviour
         if (newVideo)
         {
             // Calculate scale for new  aspect ratio
-            int min = Mathf.Min(videoTexture.width, videoTexture.height);
-            int max = Mathf.Max(videoTexture.width, videoTexture.height);
+            int min = Mathf.Min(Screen.width, Screen.height);
+            int max = Mathf.Max(Screen.width, Screen.height);
             aspectRatioScale = (float)min / max;
 
             // Adjust the smallest input dimension to maintain the new aspect ratio
-            if (max == videoTexture.height)
+            if (max == Screen.height)
             {
                 imageDims.x = (int)(targetDims.y * aspectRatioScale);
                 imageDims.y = targetDims.y;
@@ -158,7 +154,7 @@ public class ObjectDetector : MonoBehaviour
             if (imageDims.x != targetDims.x)
             {
                 imageDims.x = targetDims.x;
-                aspectRatioScale = (float)videoTexture.height / videoTexture.width;
+                aspectRatioScale = (float)Screen.height / Screen.width;
                 imageDims.y = (int)(targetDims.x * aspectRatioScale);
                 targetDims.y = imageDims.y;
 
@@ -166,7 +162,7 @@ public class ObjectDetector : MonoBehaviour
             if (imageDims.y != targetDims.y)
             {
                 imageDims.y = targetDims.y;
-                aspectRatioScale = (float)videoTexture.width / videoTexture.height;
+                aspectRatioScale = (float)Screen.width / Screen.height;
                 imageDims.x = (int)(targetDims.y * aspectRatioScale);
                 targetDims.x = imageDims.x;
 
@@ -237,10 +233,6 @@ public class ObjectDetector : MonoBehaviour
     /// </summary>
     private void InitializationSteps()
     {
-        // Create a new videoTexture using the current video dimensions
-        videoTexture = RenderTexture.GetTemporary(Screen.width,
-            Screen.height, 24, RenderTextureFormat.ARGB32);
-
         // Initialize the textures that store the model input
         InitializeTextures(true);
         // Set up the neural network for the OpenVINO inference engine
