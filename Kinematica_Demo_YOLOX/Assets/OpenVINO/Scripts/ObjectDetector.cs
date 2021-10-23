@@ -86,8 +86,6 @@ public class ObjectDetector : MonoBehaviour
     private List<string> openVINOPaths = new List<string>();
     // Names of the OpenVINO IR model
     private List<string> openvinoModels = new List<string>();
-    // Names of the available video files 
-    private List<string> videoNames = new List<string>();
 
     // A reference to the canvas for the user interface
     private GameObject canvas;
