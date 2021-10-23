@@ -7,7 +7,7 @@ public class BoundingBoxYOLOX
     // Contains the label text
     private GameObject text = new GameObject();
     // The canvas on which the bounding box labels will be drawn
-    private GameObject canvas = GameObject.Find("Label Canvas");
+    private GameObject canvas = GameObject.Find("Bounding Boxes");
 
     // The object information for the bounding box
     private Utils.Object info;
