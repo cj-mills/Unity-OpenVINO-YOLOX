@@ -448,8 +448,6 @@ public class ObjectDetector : MonoBehaviour
     /// <param name="dest">The texture for the targer display</param>
     void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
-        //Graphics.Blit(src, dest);
-
         // Toggle whether to perform inference
         if (performInference == true)
         {
