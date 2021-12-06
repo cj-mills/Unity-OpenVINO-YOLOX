@@ -4,6 +4,12 @@
 
 This tutorial series covers how to run the [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX) object detection model in the Unity game engine with the OpenVINO™ Toolkit.
 
+## Update - 12/6/2021
+
+Created a new GitHub repository that contains an updated version of my initial project that enables the plugin to be used in the Unity Editor and removes the need to manually move files when building the project.
+
+* [In-Editor Repository](https://github.com/cj-mills/Unity-OpenVINO-YOLOX-In-Editor)
+
 
 ## Demo Video
 * [OpenVINO YOLOX Unity Plugin Demo](https://www.youtube.com/watch?v=opClIrHumzI)
