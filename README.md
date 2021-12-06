@@ -40,3 +40,10 @@ This tutorial series covers how to run the [YOLOX](https://github.com/Megvii-Bas
 [Part 2](https://christianjmills.com/OpenVINO-Object-Detection-for-Unity-Tutorial-2/): This post walks through the steps needed to create a Dynamic link library (DLL) in Visual Studio to perform inference with the pretrained deep learning model.
 
 [Part 3](https://christianjmills.com/OpenVINO-Object-Detection-for-Unity-Tutorial-3/): This post demonstrates how to create a Unity project to access the DLL as a plugin.
+
+
+
+## Follow Ups
+### In-Editor
+* [GitHub Repository](https://github.com/cj-mills/Unity-OpenVINO-YOLOX-In-Editor)
+
