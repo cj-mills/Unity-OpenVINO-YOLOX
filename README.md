@@ -3,7 +3,7 @@
 ### 8/11/2022:
 
 * This tutorial is outdated. Use the new version at the link below.
-* [End-to-End Object Detection for Unity With IceVision and OpenVINO Pt. 1](https://christianjmills.com/IceVision-to-OpenVINO-to-Unity-Tutorial-1/)
+* [End-to-End Object Detection for Unity With IceVision and OpenVINO Pt. 1](https://christianjmills.com/posts/icevision-openvino-unity-tutorial/part-1/)
 ------
 
 ![OpenVINO_YOLOX_Plugin_Demo](https://raw.githubusercontent.com/cj-mills/Unity-OpenVINO-YOLOX/main/images/OpenVINO_YOLOX_Plugin_Demo.gif)
@@ -47,11 +47,11 @@ Created a new GitHub repository that contains an updated version of my initial p
 ## Tutorial Links
 
 
-[Part 1](https://christianjmills.com/OpenVINO-Object-Detection-for-Unity-Tutorial-1/): This post covers the prerequisite software, pretrained object detection models, and test videos used in the tutorial.
+[Part 1](https://christianjmills.com/posts/openvino-yolox-unity/part-1/): This post covers the prerequisite software, pretrained object detection models, and test videos used in the tutorial.
 
-[Part 2](https://christianjmills.com/OpenVINO-Object-Detection-for-Unity-Tutorial-2/): This post walks through the steps needed to create a Dynamic link library (DLL) in Visual Studio to perform inference with the pretrained deep learning model.
+[Part 2](https://christianjmills.com/posts/openvino-yolox-unity/part-2/): This post walks through the steps needed to create a Dynamic link library (DLL) in Visual Studio to perform inference with the pretrained deep learning model.
 
-[Part 3](https://christianjmills.com/OpenVINO-Object-Detection-for-Unity-Tutorial-3/): This post demonstrates how to create a Unity project to access the DLL as a plugin.
+[Part 3](https://christianjmills.com/posts/openvino-yolox-unity/part-3/): This post demonstrates how to create a Unity project to access the DLL as a plugin.
 
 
 
